@@ -14,7 +14,7 @@ body {
     display: flex;
     padding: var(--spacing-xl) var(--spacing-xl);
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /* dfgdg*/
 }
 
 .hero__info {
