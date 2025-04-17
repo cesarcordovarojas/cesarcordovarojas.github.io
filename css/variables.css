@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../src/fonts/ClashDisplay-Semibold.woff2') format('woff2'),
+         url('../src/fonts/ClashDisplay-Bold.woff2') format('woff2');
+    font-weight: 600 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  :root {
+
+    /* ==========================================================================
+       Typography
+    ========================================================================== */
+
+    /* Font families */
+    --font-family-display: 'ClashDisplay', sans-serif;
+    --font-family-body: 'Inter', sans-serif;
+  
+    /* Display XL (Header 1) */
+    --fs-text-display-xl: 5.5rem;    /* 88px */
+    --lh-text-display-xl: 6.75rem;   /* 108px */
+    --ls-text-display-xl: 0rem;
+    --fw-text-display-xl: 600;
+  
+    /* Display LG (Header 2) */
+    --fs-text-display-lg: 4rem;      /* 64px */
+    --lh-text-display-lg: 5rem;      /* 80px */
+    --ls-text-display-lg: 0rem;
+    --fw-text-display-lg: 700;
+  
+    /* Display SM (Header 3) */
+    --fs-text-display-sm: 1.25rem;   /* 20px */
+    --lh-text-display-sm: 1.625rem;  /* 26px */
+    --ls-text-display-sm: 0rem;
+    --fw-text-display-sm: 600;
+  
+    /* Subtitle */
+    --fs-text-subtitle: 2rem;        /* 32px */
+    --lh-text-subtitle: 2.5rem;      /* 40px */
+    --ls-text-subtitle: 0rem;
+    --fw-text-subtitle: 400;
+  
+    /* Body LG (Paragraph 1) */
+    --fs-text-body-lg: 1.25rem;      /* 20px */
+    --lh-text-body-lg: 1.625rem;     /* 26px */
+    --ls-text-body-lg: 0rem;
+    --fw-text-body-lg: 400;
+  
+    /* Body SM (Paragraph 2) */
+    --fs-text-body-sm: 1rem;         /* 16px */
+    --lh-text-body-sm: 1.375rem;     /* 22px */
+    --ls-text-body-sm: 0rem;
+    --fw-text-body-sm: 400;
+
+
+    /* ==========================================================================
+       Color
+    ========================================================================== */
+
+    /* Background */
+    --color-bg-primary: #141414;
+    --color-bg-secondary: rgba(20, 20, 20, 0.70);
+
+    /* Text */
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #c2c2c2;
+    --color-text-positive: #3bcd83;
+
+    /* Brand */
+    --color-brand-primary: #f90256;
+    --color-brand-hover: #e2004e;
+
+    /* Borders */
+    --color-border-primary: #575757;
+    --color-border-hover: #ffffff;
+    --color-border-secondary: #3bcd83;
+
+
+    /* ==========================================================================
+       Spacing
+    ========================================================================== */
+
+    --spacing-quarck: 0.25rem; /* 4px */
+    --spacing-nano: 0.5rem;    /* 8px */
+    --spacing-micro: 1rem;     /* 16px */
+    --spacing-xs: 1.5rem;      /* 24px */
+    --spacing-sm: 2rem;        /* 32px */
+    --spacing-md: 3rem;        /* 48px */
+    --spacing-lg: 4rem;        /* 64px */
+    --spacing-xl: 8.75rem;     /* 140px */
+
+
+    /* ==========================================================================
+       Border radius
+    ========================================================================== */
+
+    --radius-md: 16px;
+    --radius-full: 500px;
+
+
+    /* ==========================================================================
+       Blur
+    ========================================================================== */
+
+    --blur-lg: 32px;
+
+
+    /* ==========================================================================
+       Breakpoints
+    ========================================================================== */
+
+    --breakpoint-xs: 320px;
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+  }
+
+  

@@ -1,0 +1,24 @@
+@import url(./reset.css);
+@import url(./variables.css);
+@import url(./utilities.css);
+@import url(../css/components/bg-noise.css);
+@import url(../css/components/header.css);
+@import url(../css/components/buttons.css);
+@import url(../css/components/footer.css);
+
+body {
+    background-color: var(--color-bg-primary);
+}
+
+.hero {
+    display: flex;
+    padding: var(--spacing-xl) var(--spacing-xl);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero__info {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}

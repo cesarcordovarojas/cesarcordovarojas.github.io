@@ -1,0 +1,33 @@
+/* ==========================================================================
+   Header
+========================================================================== */
+
+header {
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-xs) var(--spacing-lg);
+    background-color: var(--color-bg-secondary);
+    backdrop-filter: var(--blur-lg);
+}
+
+.header__nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.header__nav a {
+    color: var(--color-text-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header__nav a:hover {
+    color: var(--color-text-secondary);
+}
+
+.header__nav a:focus {
+    outline: auto;
+}

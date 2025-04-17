@@ -1,0 +1,10 @@
+.noise-bg {
+    opacity: 0.05;
+    pointer-events: none;
+    background-image: url(../../src/images/noise.gif);
+    background-size: auto;
+    position: fixed;
+    background-position: 0px 0px;
+    inset: 0%;
+    z-index: -1;
+}

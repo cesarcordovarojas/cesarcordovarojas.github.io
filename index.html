@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div id="header__component"></div>
+    <div class="noise-bg"></div>
+
+    <section class="hero">
+        <div class="hero__info">
+            <span class="txt-body-lg color-txt-primary">¡Hola! 👋 Soy César Córdova</span>
+            <h1 class="txt-display-xl color-txt-primary">UX/UI Designer </h1>
+            <p class="txt-body-lg color-txt-primary">Con más de 5 años de experiencia creando productos digitales intuitivos y centrados en el usuario.</p>
+        </div>
+        <img src="./src/images/float.svg" alt="float">
+    </section>
+
+    <script>
+        fetch('html/components/header.html') //devuelve promesa
+            .then(res => res.text()) // cuando esté lista se convierte en texto
+            .then(header => {
+                document.getElementById("header__component").innerHTML = header; // mete el html dentro del div "header__component"
+            });
+    </script>
+
+</body>
+
+</html>
