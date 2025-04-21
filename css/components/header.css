@@ -4,12 +4,13 @@
 
 header {
     display: flex;
+    width: 100%;
     position: sticky;
     justify-content: space-between;
     align-items: center;
     padding: var(--spacing-xs) var(--spacing-lg);
-    background-color: var(--color-bg-secondary);
     backdrop-filter: var(--blur-lg);
+    background-color: var(--color-bg-secondary);
 }
 
 .header__nav ul {

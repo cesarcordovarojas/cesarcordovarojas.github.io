@@ -5,6 +5,7 @@
 @import url(../css/components/header.css);
 @import url(../css/components/buttons.css);
 @import url(../css/components/footer.css);
+@import url(../css/components/slider.css);
 
 body {
     background-color: var(--color-bg-primary);
@@ -12,13 +13,69 @@ body {
 
 .hero {
     display: flex;
-    padding: var(--spacing-xl) var(--spacing-xl);
+    padding: var(--spacing-xl);
     justify-content: space-between;
-    align-items: center; /* dfgdg*/
+    align-items: center;
 }
 
 .hero__info {
     display: flex;
     flex-direction: column;
     width: 60%;
+}
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-xl);
+    gap: var(--spacing-sm);
+}
+
+.cards__portfolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: var(--spacing-sm);
+}
+
+.portfolio__card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-nano);
+}
+
+.card__img {
+    border-radius: var(--radius-md);
+}
+
+.testimonios {
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-xl);
+    gap: var(--spacing-sm);
+}
+
+.cards__testimonios {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.testimonio__card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg-primary);
+    padding: var(--spacing-sm);
+    gap: var(--spacing-lg);
+    border-radius: var(--radius-md);
+}
+
+.profesional__data {
+    display: flex;
+    gap: var(--spacing-micro);
+    align-items: center;
+
+}
+
+.profesional__name {
+    display: flex;
+    flex-direction: column;
 }

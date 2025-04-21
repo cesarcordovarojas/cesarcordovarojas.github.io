@@ -1,5 +1,5 @@
 .noise-bg {
-    opacity: 0.05;
+    opacity: 0.03;
     pointer-events: none;
     background-image: url(../../src/images/noise.gif);
     background-size: auto;

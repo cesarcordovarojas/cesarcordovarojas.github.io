@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Slider
+========================================================================== */
+
+.slider {
+    display: flex;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-xs);
+    background-color: var(--color-bg-primary);
+    overflow: hidden;
+    border:solid var(--color-border-secondary);
+    border-width: 1px 0;
+}
+
+.slider__item {
+    display: flex;
+    gap: var(--spacing-nano);
+    white-space: nowrap;
+    animation: slider 2000ms linear infinite;
+}
+
+@keyframes slider {
+    from {
+        transform: translateX(0);
+    } to {
+        transform: translateX(-100%);
+    }
+}

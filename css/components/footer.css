@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Footer
+========================================================================== */
+
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__icons {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-lg) var(--spacing-xl) var(--spacing-md) var(--spacing-xl);
+}
+
+.icon a {
+    display: flex;
+    justify-items: center;
+    text-decoration: underline;
+    text-decoration-color: var(--color-txt-primary);
+    gap: var(--spacing-nano);
+}
+
+.footer__legal {
+    text-align: center;
+    background-color: var(--color-bg-primary);
+    padding: var(--spacing-micro);
+}

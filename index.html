@@ -15,23 +15,135 @@
 
 <body>
     <div id="header__component"></div>
+
     <div class="noise-bg"></div>
 
     <section class="hero">
         <div class="hero__info">
             <span class="txt-body-lg color-txt-primary">¡Hola! 👋 Soy César Córdova</span>
             <h1 class="txt-display-xl color-txt-primary">UX/UI Designer </h1>
-            <p class="txt-body-lg color-txt-primary">Con más de 5 años de experiencia creando productos digitales intuitivos y centrados en el usuario.</p>
+            <p class="txt-body-lg color-txt-primary">Con más de 5 años de experiencia creando productos digitales
+                intuitivos y centrados en el usuario.</p>
         </div>
         <img src="./src/images/float.svg" alt="float">
     </section>
 
+    <div class="slider" id="slider">
+        <div class="slider__item">
+            <img src="./src/images/circle.svg" alt="circulo">
+            <span class="txt-display-sm color-txt-positive">DISPONIBLE</span>
+        </div>
+        <div class="slider__item">
+            <img src="./src/images/circle.svg" alt="circulo">
+            <span class="txt-display-sm color-txt-positive">DISPONIBLE</span>
+        </div>
+        <div class="slider__item">
+            <img src="./src/images/circle.svg" alt="circulo">
+            <span class="txt-display-sm color-txt-positive">DISPONIBLE</span>
+        </div>
+        <div class="slider__item">
+            <img src="./src/images/circle.svg" alt="circulo">
+            <span class="txt-display-sm color-txt-positive">DISPONIBLE</span>
+        </div>
+        <div class="slider__item">
+            <img src="./src/images/circle.svg" alt="circulo">
+            <span class="txt-display-sm color-txt-positive">DISPONIBLE</span>
+        </div>
+        <div class="slider__item">
+            <img src="./src/images/circle.svg" alt="circulo">
+            <span class="txt-display-sm color-txt-positive">DISPONIBLE</span>
+        </div>
+        <div class="slider__item">
+            <img src="./src/images/circle.svg" alt="circulo">
+            <span class="txt-display-sm color-txt-positive">DISPONIBLE</span>
+        </div>
+        <div class="slider__item">
+            <img src="./src/images/circle.svg" alt="circulo">
+            <span class="txt-display-sm color-txt-positive">DISPONIBLE</span>
+        </div>
+    </div>
+
+    <article class="portfolio">
+
+        <h2 class="txt-display-lg color-txt-primary">Portfolio</h2>
+
+        <div class="cards__portfolio">
+
+            <div class="portfolio__card">
+                <img class="card__img" src="./src/images/card__img.png" alt="proyecto">
+                <span class="txt-body-lg color-txt-primary">Name del proyecto</span>
+            </div>
+            <div class="portfolio__card">
+                <img class="card__img" src="./src/images/card__img.png" alt="proyecto">
+                <span class="txt-body-lg color-txt-primary">Name del proyecto</span>
+            </div>
+            <div class="portfolio__card">
+                <img class="card__img" src="./src/images/card__img.png" alt="proyecto">
+                <span class="txt-body-lg color-txt-primary">Name del proyecto</span>
+            </div>
+            <div class="portfolio__card">
+                <img class="card__img" src="./src/images/card__img.png" alt="proyecto">
+                <span class="txt-body-lg color-txt-primary">Name del proyecto</span>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="testimonios">
+
+        <h2 class="txt-display-lg color-txt-primary">Testimonios</h2>
+
+        <div class="cards__testimonios">
+
+            <div class="testimonio__card">
+                <p class="txt-body-lg color-txt-primary">“Trabajar con Jhon en nuestra aplicación de banca móvil fue
+                    revolucionario. Sus habilidades de diseño y su comprensión de la experiencia del usuario son
+                    inigualables.”</p>
+                <div class="profesional__data">
+                    <img class="user__img" src="./src/images/user__img.png" alt="">
+                    <div class="profesional__name">
+                        <span class="txt-display-sm color-txt-primary">Dariana Patiño</span>
+                        <span class="txt-body-sm color-txt-secondary">UX Designer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonio__card">
+                <p class="txt-body-lg color-txt-primary">“Trabajar con Jhon en nuestra aplicación de banca móvil fue
+                    revolucionario. Sus habilidades de diseño y su comprensión de la experiencia del usuario son
+                    inigualables.”</p>
+                <div class="profesional__data">
+                    <img class="user__img" src="./src/images/user__img.png" alt="">
+                    <div class="profesional__name">
+                        <span class="txt-display-sm color-txt-primary">Dariana Patiño</span>
+                        <span class="txt-body-sm color-txt-secondary">UX Designer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <div id="footer__component"></div>
+
     <script>
-        fetch('html/components/header.html') //devuelve promesa
-            .then(res => res.text()) // cuando esté lista se convierte en texto
+
+        // Header
+        fetch('html/components/header.html')
+            .then(response => response.text())
             .then(header => {
-                document.getElementById("header__component").innerHTML = header; // mete el html dentro del div "header__component"
+                document.getElementById("header__component").innerHTML = header;
             });
+
+        // Footer
+        fetch('html/components/footer.html')
+            .then(response => response.text())
+            .then(footer => {
+                document.getElementById("footer__component").innerHTML = footer;
+            });
+
+        // Slider
+        let disponible = document.getElementById("slider").cloneNode(true);
+        document.getElementById("disponible").appendChild(disponible);
+
     </script>
 
 </body>
