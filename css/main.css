@@ -5,111 +5,279 @@
 @import url(../css/components/header.css);
 @import url(../css/components/buttons.css);
 @import url(../css/components/footer.css);
-@import url(../css/components/slider.css);
+@import url(../css/components/marquee.css);
+@import url(../css/components/acordeon.css);
 
 body {
     background-color: var(--color-bg-primary);
+    margin: 0;
+    padding: 0;
 }
 
-.hero {
+/* ==========================================================================
+   Hero
+========================================================================== */
+
+.Hero {
+    max-width: 1440px;
+    margin: 0 auto;
     display: flex;
     padding: var(--spacing-xl);
     justify-content: space-between;
     align-items: center;
+    color: var(--color-text-primary);
 }
 
-.hero__info {
+.Hero-info {
     display: flex;
     flex-direction: column;
     width: 60%;
 }
 
-.portfolio {
+.Hero-img {
+    width: 100%;
+    max-width: 317px;
+    height: auto;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-32px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+/* ==========================================================================
+   Portfolio
+========================================================================== */
+
+.Portfolio {
+    max-width: 1440px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     padding: var(--spacing-xl);
-    gap: var(--spacing-sm);
+    padding-bottom: 0;
+    color: var(--color-text-primary);
 }
 
-.cards__portfolio {
+.Portfolio-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(564px, 1fr));
     grid-gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
 }
 
-.portfolio__card {
+.Portfolio-card {
     display: flex;
+    overflow: hidden;
     flex-direction: column;
-    gap: var(--spacing-nano);
+    margin-bottom: var(--spacing-md);
+    transition: transform 0.3s ease;
 }
 
-.card__img {
+.Portfolio-card:hover {
+    transform: translateY(-8px);
+}
+
+.Portfolio-img {
     border-radius: var(--radius-md);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
-.testimonios {
+.Portfolio-name {
+    margin-top: var(--spacing-micro);
+}
+
+
+/* ==========================================================================
+   Testimonios
+========================================================================== */
+
+.Testimonios {
+    max-width: 1440px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     padding: var(--spacing-xl);
     gap: var(--spacing-sm);
+    color: var(--color-text-primary);
 }
 
-.cards__testimonios {
+.Testimonios-grid {
     display: flex;
     gap: var(--spacing-sm);
 }
 
-.testimonio__card {
+.TestimoniosCard {
     display: flex;
     flex-direction: column;
     background-color: var(--color-bg-primary);
     padding: var(--spacing-sm);
     gap: var(--spacing-lg);
     border-radius: var(--radius-md);
+    border: 1px solid var(--color-border-primary);
+    transition: transform 0.3s ease;
 }
 
-.profesional__data {
+.TestimoniosCard:hover {
+    border: 1px solid var(--color-border-hover);
+    transform: translateY(-8px);
+}
+
+.TestimoniosCard-txt {
     display: flex;
     gap: var(--spacing-micro);
     align-items: center;
 
 }
 
-.profesional__name {
+.TestimoniosCard-autor {
+    display: flex;
+    gap: var(--spacing-micro);
+    align-items: center;
+}
+
+.TestimoniosCard-info {
     display: flex;
     flex-direction: column;
 }
 
-.hablemos {
-    display: flex;
-    flex-direction: column;
-    /* padding: var(--spacing-xl); */
-    gap: var(--spacing-sm);
-    position: relative;
-}
+/* ==========================================================================
+   Hablemos
+========================================================================== */
 
-.hablemos__text {
+.Contact {
+    max-width: 1440px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     padding: var(--spacing-xl);
-    /* align-items: center; */
     gap: var(--spacing-lg);
-    /* text-align: start; */
+    color: var(--color-text-primary);
+    align-items: center;
 }
 
-.mail {
+.Contact-title {
+    width: 100%;
+}
+
+.Contact-email {
     display: flex;
-    width: 672px;
-    gap: var(--spacing-sm);
+    width: 663px;
+    gap: var(--spacing-md);
     padding: var(--spacing-md);
     background-color: var(--color-bg-primary);
     border-radius: var(--radius-md);
-    border:solid var(--color-border-hover);
+    border: solid var(--color-border-hover);
     border-width: 0 0 4px 0;
-    /* border: 4px solid var(--color-border-hover) */
+    text-decoration: none;
+    transition: transform 0.2s ease;
 }
 
-.isotipo {
-    position: absolute;
+.Contact-email:hover {
+    transform: translateY(-8px);
+}
+
+.Contact-emailText {
+    color: var(--color-text-primary);
+}
+
+#emailText-span {
+    color: var(--color-text-secondary);
+}
+
+.Contact-arrow {
+    width: 40px;
+    height: 40px;
+    animation: desplazamiento 1s infinite ease-in-out;
+}
+
+@keyframes desplazamiento {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(8px);
+    }
+  }
+
+
+/* ==========================================================================
+   Herramientas
+========================================================================== */
+
+.Tools {
+    padding: var(--spacing-xl);
+    gap: var(--spacing-sm);
+    color: var(--color-text-primary);
+}
+
+.Tools-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(86px, 1fr));
+    gap: var(--spacing-md);
+    list-style: none;
+    padding-top: var(--spacing-sm);
+}
+
+.Tools-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-nano);
+    transition: transform 0.2s ease;
+}
+
+.Tools-card:hover {
+    transform: translateY(-5px);
+}
+
+.Tools-icon {
+    width: 80px;
+    height: 80px;
+}
+
+
+/* ==========================================================================
+   Sobre mí
+========================================================================== */
+
+.AboutMe {
+    padding: var(--spacing-xl);
+    gap: var(--spacing-sm);
+    color: var(--color-text-primary);
+}
+
+.AboutMe-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--spacing-md);
+    align-items: center;
+    padding-top: var(--spacing-sm);
+}
+
+.AboutMe-content {
+    display: grid;
+    flex-direction: column;
+    justify-items: end;
+    gap: var(--spacing-md);
+}
+
+.AboutMe-image {
     width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    object-fit: cover;
 }

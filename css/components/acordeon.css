@@ -1,0 +1,52 @@
+.WorkMethod {
+    color: var(--color-text-primary);
+    padding: var(--spacing-xl);
+}
+
+.Acordeon-item {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 0px;
+}
+
+.Acordeon-header {
+    display: flex;
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-primary);
+    padding: var(--spacing-sm);
+    /* width: 100%; */
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border-primary);
+    transition: transform 0.3s ease;
+}
+
+.Acordeon-content {
+    height: 0px;
+    padding-right: var(--spacing-sm);
+    padding-left: var(--spacing-sm);
+    overflow-y: hidden;
+    transition: height 0.25s ease-in;
+    background-color: var(--color-bg-primary);
+    border-bottom-left-radius: var(--radius-md);
+    border-bottom-right-radius: var(--radius-md);
+    border: 1px solid var(--color-border-primary);
+}
+
+.Acordeon-item.active .Acordeon-header img {
+    transform: rotate(180deg);
+}
+
+.Acordeon-header .active {
+    border-bottom: 0px solid;
+}
+
+.Acordeon-item .Acordeon-header img {
+    transition: transform 0.25s ease-in;
+}
+
+.Acordeon-header:hover {
+    border: 1px solid var(--color-border-hover);
+}

@@ -1,28 +1,43 @@
 /* ==========================================================================
-   Slider
+   Marquee 
 ========================================================================== */
 
-.slider {
+.Marquee {
+    overflow: hidden;
     display: flex;
+    white-space: nowrap;
     gap: var(--spacing-lg);
     padding: var(--spacing-xs);
     background-color: var(--color-bg-primary);
-    overflow: hidden;
     border:solid var(--color-border-secondary);
     border-width: 1px 0;
 }
 
-.slider__item {
+.Marquee-content {
     display: flex;
-    gap: var(--spacing-nano);
-    white-space: nowrap;
-    animation: slider 2000ms linear infinite;
+    animation: scroll-horizontal 24s linear infinite;
+    gap: var(--spacing-lg);
 }
 
-@keyframes slider {
+.Marquee-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-nano)
+}
+
+.Marquee-icon {
+    width: 14px;
+    height: 14px;
+}
+
+.Marquee-txt {
+    color: var(--color-text-positive);
+}
+
+@keyframes scroll-horizontal {
     from {
         transform: translateX(0);
     } to {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }

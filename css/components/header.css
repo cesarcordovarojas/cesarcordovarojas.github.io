@@ -2,33 +2,35 @@
    Header
 ========================================================================== */
 
-header {
+.Header {
     display: flex;
     width: 100%;
     position: sticky;
+    top: 0;
     justify-content: space-between;
     align-items: center;
     padding: var(--spacing-xs) var(--spacing-lg);
-    backdrop-filter: var(--blur-lg);
     background-color: var(--color-bg-secondary);
+    backdrop-filter: var(--blur-lg);
+    z-index: 1;
 }
 
-.header__nav ul {
-    list-style-type: none;
+.Header-logo img {
+    height: 48px;
+}
+
+.Header-list {
     display: flex;
     gap: var(--spacing-md);
+    list-style: none;
 }
 
-.header__nav a {
+.Header-link {
     color: var(--color-text-primary);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.header__nav a:hover {
+.Header-link:hover {
     color: var(--color-text-secondary);
-}
-
-.header__nav a:focus {
-    outline: auto;
 }

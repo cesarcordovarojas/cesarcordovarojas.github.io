@@ -1,4 +1,4 @@
-.btn__primary {
+.btnPrimary {
   font-family: var(--font-family-display);
   font-size: var(--fs-text-display-sm);
   line-height: var(--lh-text-display-sm);
@@ -9,8 +9,11 @@
   background-color: var(--color-brand-primary);
   border-radius: var(--radius-md);
   cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease;
 }
 
-.btn__primary:hover {
+.btnPrimary:hover {
     background-color: var(--color-brand-hover);
+    transform: translateY(-5px);
   }

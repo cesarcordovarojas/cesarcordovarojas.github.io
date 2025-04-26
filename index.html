@@ -14,136 +14,199 @@
 </head>
 
 <body>
-    <div id="header__component"></div>
+    <!-- Header -->
+    <header class="Header">
+        <!-- Logo -->
+        <a href="/index.html" class="Header-logo">
+            <img src="/src/images/brand-logo.svg" alt="César Córdova - UX/UI Designer">
+        </a>
+        <!-- Lista de navegación -->
+        <nav class="Header-nav">
+            <ul class="Header-list txt-body-lg">
+                <li> <a href="/index.html" class="Header-link">Inicio</a> </li>
+                <li> <a href="/html/sobre-mi.html" class="Header-link">Sobre mí</a> </li>
+                <li> <a href="/html/portfolio.html" class="Header-link">Portfolio</a> </li>
+            </ul>
+        </nav>
+        <a href="/html/hablemos.html" class="btnPrimary">¡Hablemos!</a>
+    </header>
 
+    <!-- Background -->
     <div class="noise-bg"></div>
 
-    <section class="hero">
-        <div class="hero__info">
-            <span class="txt-body-lg color-txt-primary">¡Hola! 👋 Soy César Córdova</span>
-            <h1 class="txt-display-xl color-txt-primary">UX/UI Designer </h1>
-            <p class="txt-body-lg color-txt-primary">Con más de 5 años de experiencia creando productos digitales
-                intuitivos y centrados en el usuario.</p>
-        </div>
-        <img src="./src/images/float.svg" alt="float">
-    </section>
-
-    <div class="slider" id="slider">
-        <div class="slider__item">
-            <img src="./src/images/circle.svg" alt="circulo">
-            <span class="txt-display-sm color-txt-positive">DISPONIBLE</span>
-        </div>
-        <div class="slider__item">
-            <img src="./src/images/circle.svg" alt="circulo">
-            <span class="txt-display-sm color-txt-positive">DISPONIBLE</span>
-        </div>
-        <div class="slider__item">
-            <img src="./src/images/circle.svg" alt="circulo">
-            <span class="txt-display-sm color-txt-positive">DISPONIBLE</span>
-        </div>
-        <div class="slider__item">
-            <img src="./src/images/circle.svg" alt="circulo">
-            <span class="txt-display-sm color-txt-positive">DISPONIBLE</span>
-        </div>
-        <div class="slider__item">
-            <img src="./src/images/circle.svg" alt="circulo">
-            <span class="txt-display-sm color-txt-positive">DISPONIBLE</span>
-        </div>
-        <div class="slider__item">
-            <img src="./src/images/circle.svg" alt="circulo">
-            <span class="txt-display-sm color-txt-positive">DISPONIBLE</span>
-        </div>
-        <div class="slider__item">
-            <img src="./src/images/circle.svg" alt="circulo">
-            <span class="txt-display-sm color-txt-positive">DISPONIBLE</span>
-        </div>
-        <div class="slider__item">
-            <img src="./src/images/circle.svg" alt="circulo">
-            <span class="txt-display-sm color-txt-positive">DISPONIBLE</span>
-        </div>
-    </div>
-
-    <article class="portfolio">
-
-        <h2 class="txt-display-lg color-txt-primary">Portfolio</h2>
-
-        <div class="cards__portfolio">
-
-            <div class="portfolio__card">
-                <img class="card__img" src="./src/images/card__img.png" alt="proyecto">
-                <span class="txt-body-lg color-txt-primary">Name del proyecto</span>
+    <main>
+        <!-- Hero -->
+        <section class="Hero">
+            <div class="Hero-info">
+                <h2 class="Hero-greeting txt-body-lg" id="heroEffect"></h2>
+                <h1 class="Hero-title txt-display-xl">UX/UI Designer </h1>
+                <p class="Hero-description txt-body-lg">Con más de 5 años de experiencia creando productos digitales
+                    intuitivos y centrados en el usuario.</p>
             </div>
-            <div class="portfolio__card">
-                <img class="card__img" src="./src/images/card__img.png" alt="proyecto">
-                <span class="txt-body-lg color-txt-primary">Name del proyecto</span>
-            </div>
-            <div class="portfolio__card">
-                <img class="card__img" src="./src/images/card__img.png" alt="proyecto">
-                <span class="txt-body-lg color-txt-primary">Name del proyecto</span>
-            </div>
-            <div class="portfolio__card">
-                <img class="card__img" src="./src/images/card__img.png" alt="proyecto">
-                <span class="txt-body-lg color-txt-primary">Name del proyecto</span>
-            </div>
-        </div>
+            <img class="Hero-img" src="/src/images/float.svg"
+                alt="Pensar antes de diseñar, Diseñar es iterar, Colaborar para crear">
+        </section>
 
-    </article>
-
-    <article class="testimonios">
-
-        <h2 class="txt-display-lg color-txt-primary">Testimonios</h2>
-
-        <div class="cards__testimonios">
-
-            <div class="testimonio__card">
-                <p class="txt-body-lg color-txt-primary">“Trabajar con Jhon en nuestra aplicación de banca móvil fue
-                    revolucionario. Sus habilidades de diseño y su comprensión de la experiencia del usuario son
-                    inigualables.”</p>
-                <div class="profesional__data">
-                    <img class="user__img" src="./src/images/user__img.png" alt="">
-                    <div class="profesional__name">
-                        <span class="txt-display-sm color-txt-primary">Dariana Patiño</span>
-                        <span class="txt-body-sm color-txt-secondary">UX Designer</span>
-                    </div>
+        <!-- Marquee -->
+        <div class="Marquee" id="marquee">
+            <div class="Marquee-content">
+                <div class="Marquee-item">
+                    <img class="Marquee-icon" src="/src/images/circle.svg" alt="circulo">
+                    <span class="Marquee-txt txt-display-sm">DISPONIBLE</span>
+                </div>
+                <div class="Marquee-item">
+                    <img class="Marquee-icon" src="/src/images/circle.svg" alt="circulo">
+                    <span class="Marquee-txt txt-display-sm">DISPONIBLE</span>
+                </div>
+                <div class="Marquee-item">
+                    <img class="Marquee-icon" src="/src/images/circle.svg" alt="circulo">
+                    <span class="Marquee-txt txt-display-sm">DISPONIBLE</span>
+                </div>
+                <div class="Marquee-item">
+                    <img class="Marquee-icon" src="/src/images/circle.svg" alt="circulo">
+                    <span class="Marquee-txt txt-display-sm">DISPONIBLE</span>
+                </div>
+                <div class="Marquee-item">
+                    <img class="Marquee-icon" src="/src/images/circle.svg" alt="circulo">
+                    <span class="Marquee-txt txt-display-sm">DISPONIBLE</span>
+                </div>
+                <div class="Marquee-item">
+                    <img class="Marquee-icon" src="/src/images/circle.svg" alt="circulo">
+                    <span class="Marquee-txt txt-display-sm">DISPONIBLE</span>
+                </div>
+                <div class="Marquee-item">
+                    <img class="Marquee-icon" src="/src/images/circle.svg" alt="circulo">
+                    <span class="Marquee-txt txt-display-sm">DISPONIBLE</span>
+                </div>
+                <div class="Marquee-item">
+                    <img class="Marquee-icon" src="/src/images/circle.svg" alt="circulo">
+                    <span class="Marquee-txt txt-display-sm">DISPONIBLE</span>
+                </div>
+                <div class="Marquee-item">
+                    <img class="Marquee-icon" src="/src/images/circle.svg" alt="circulo">
+                    <span class="Marquee-txt txt-display-sm">DISPONIBLE</span>
+                </div>
+                <div class="Marquee-item">
+                    <img class="Marquee-icon" src="/src/images/circle.svg" alt="circulo">
+                    <span class="Marquee-txt txt-display-sm">DISPONIBLE</span>
                 </div>
             </div>
-            <div class="testimonio__card">
-                <p class="txt-body-lg color-txt-primary">“Trabajar con Jhon en nuestra aplicación de banca móvil fue
-                    revolucionario. Sus habilidades de diseño y su comprensión de la experiencia del usuario son
-                    inigualables.”</p>
-                <div class="profesional__data">
-                    <img class="user__img" src="./src/images/user__img.png" alt="">
-                    <div class="profesional__name">
-                        <span class="txt-display-sm color-txt-primary">Dariana Patiño</span>
-                        <span class="txt-body-sm color-txt-secondary">UX Designer</span>
-                    </div>
+            <div class="Marquee-content">
+                <div class="Marquee-item">
+                    <img class="Marquee-icon" src="/src/images/circle.svg" alt="circulo">
+                    <span class="Marquee-txt txt-display-sm">DISPONIBLE</span>
+                </div>
+                <div class="Marquee-item">
+                    <img class="Marquee-icon" src="/src/images/circle.svg" alt="circulo">
+                    <span class="Marquee-txt txt-display-sm">DISPONIBLE</span>
+                </div>
+                <div class="Marquee-item">
+                    <img class="Marquee-icon" src="/src/images/circle.svg" alt="circulo">
+                    <span class="Marquee-txt txt-display-sm">DISPONIBLE</span>
+                </div>
+                <div class="Marquee-item">
+                    <img class="Marquee-icon" src="/src/images/circle.svg" alt="circulo">
+                    <span class="Marquee-txt txt-display-sm">DISPONIBLE</span>
+                </div>
+                <div class="Marquee-item">
+                    <img class="Marquee-icon" src="/src/images/circle.svg" alt="circulo">
+                    <span class="Marquee-txt txt-display-sm">DISPONIBLE</span>
+                </div>
+                <div class="Marquee-item">
+                    <img class="Marquee-icon" src="/src/images/circle.svg" alt="circulo">
+                    <span class="Marquee-txt txt-display-sm">DISPONIBLE</span>
+                </div>
+                <div class="Marquee-item">
+                    <img class="Marquee-icon" src="/src/images/circle.svg" alt="circulo">
+                    <span class="Marquee-txt txt-display-sm">DISPONIBLE</span>
+                </div>
+                <div class="Marquee-item">
+                    <img class="Marquee-icon" src="/src/images/circle.svg" alt="circulo">
+                    <span class="Marquee-txt txt-display-sm">DISPONIBLE</span>
+                </div>
+                <div class="Marquee-item">
+                    <img class="Marquee-icon" src="/src/images/circle.svg" alt="circulo">
+                    <span class="Marquee-txt txt-display-sm">DISPONIBLE</span>
+                </div>
+                <div class="Marquee-item">
+                    <img class="Marquee-icon" src="/src/images/circle.svg" alt="circulo">
+                    <span class="Marquee-txt txt-display-sm">DISPONIBLE</span>
                 </div>
             </div>
         </div>
-    </article>
 
-    <article class="hablemos">
-        <div class="hablemos__text">
-            <h2 class="txt-display-lg color-txt-primary">¡Hablemos!</h2>
-            <div class="mail">
-                <h3 class="txt-subtitle color-txt-primary">cordovacesaresteban@gmail.com</h3>
-                <img src="./src/images/arrow-right.svg" alt="">
+        <!-- Portfolio -->
+        <article class="Portfolio">
+            <h2 class="Portfolio-title txt-display-lg">Portfolio</h2>
+            <div class="Portfolio-grid">
+                <article class="Portfolio-card">
+                    <img class="Portfolio-img" src="./src/images/card__img.png" alt="proyecto">
+                    <h3 class="Portfolio-name txt-body-lg">Name del proyecto</h3>
+                </article>
+                <article class="Portfolio-card">
+                    <img class="Portfolio-img" src="./src/images/card__img.png" alt="proyecto">
+                    <h3 class="Portfolio-name txt-body-lg">Name del proyecto</h3>
+                </article>
+                <article class="Portfolio-card">
+                    <img class="Portfolio-img" src="./src/images/card__img.png" alt="proyecto">
+                    <h3 class="Portfolio-name txt-body-lg">Name del proyecto</h3>
+                </article>
+                <article class="Portfolio-card">
+                    <img class="Portfolio-img" src="./src/images/card__img.png" alt="proyecto">
+                    <h3 class="Portfolio-name txt-body-lg">Name del proyecto</h3>
+                </article>
             </div>
-        </div>
-        <img class="isotipo" src="./src/images/isotipo.svg" alt="">
-    </article>
+        </article>
 
+        <!-- Testimonios -->
+        <article class="Testimonios">
+            <h2 class="Testimonios-title txt-display-lg">Testimonios</h2>
+            <div class="Testimonios-grid">
+                <article class="TestimoniosCard">
+                    <p class="TestimoniosCard-txt txt-body-lg">“Trabajar con Jhon en nuestra aplicación de banca móvil
+                        fue
+                        revolucionario. Sus habilidades de diseño y su comprensión de la experiencia del usuario son
+                        inigualables.”</p>
+                    <div class="TestimoniosCard-autor">
+                        <img class="TestimoniosCard-avatar" src="./src/images/user__img.png"
+                            alt="Foto de Dariana Patiño">
+                        <div class="TestimoniosCard-info">
+                            <h3 class="TestimoniosCard-name txt-display-sm">Dariana Patiño</h3>
+                            <p class="TestimoniosCard-rol txt-body-sm">UX Designer</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="TestimoniosCard">
+                    <p class="TestimoniosCard-txt txt-body-lg">“Trabajar con Jhon en nuestra aplicación de banca móvil
+                        fue
+                        revolucionario. Sus habilidades de diseño y su comprensión de la experiencia del usuario son
+                        inigualables.”</p>
+                    <div class="TestimoniosCard-autor">
+                        <img class="TestimoniosCard-avatar" src="./src/images/user__img.png"
+                            alt="Foto de Dariana Patiño">
+                        <div class="TestimoniosCard-info">
+                            <h3 class="TestimoniosCard-name txt-display-sm">Dariana Patiño</h3>
+                            <p class="TestimoniosCard-rol txt-body-sm">UX Designer</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </article>
+
+        <!-- Hablemos -->
+        <article class="Contact">
+                <h2 class="Contact-title txt-display-lg">¡Hablemos!</h2>
+                <a href="mailto:cordovacesaresteban@gmail.com" class="Contact-email">
+                    <h4 class="Contact-emailText txt-subtitle">cordovacesaresteban<span class="txt-subtitle"
+                            id="emailText-span">@gmail.com</span></h4>
+                    <img class="Contact-arrow" src="/src/images/arrow-right.svg" alt="flecha">
+                </a>
+        </article>
+    </main>
+    
     <div id="footer__component"></div>
-
+    
     <script>
-
-        // Header
-        fetch('html/components/header.html')
-            .then(response => response.text())
-            .then(header => {
-                document.getElementById("header__component").innerHTML = header;
-            });
-
         // Footer
         fetch('html/components/footer.html')
             .then(response => response.text())
@@ -151,10 +214,16 @@
                 document.getElementById("footer__component").innerHTML = footer;
             });
 
-        // Slider
-        let disponible = document.getElementById("slider").cloneNode(true);
-        document.getElementById("disponible").appendChild(disponible);
-
+        // Efecto txt
+        let heroEffect = "¡Hola! Soy César Córdova"
+        let i = 0;
+        function escribir() {
+            if (i < heroEffect.length) {
+                document.getElementById("heroEffect").textContent += heroEffect[i++]
+                setTimeout(escribir, 100)
+            }
+        }
+        escribir()
     </script>
 
 </body>
