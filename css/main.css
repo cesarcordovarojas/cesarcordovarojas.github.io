@@ -112,7 +112,6 @@ body {
     display: flex;
     overflow: hidden;
     flex-direction: column;
-    /* margin-bottom: var(--spacing-md); */
     transition: transform 0.3s ease;
 }
 
@@ -131,6 +130,29 @@ body {
     margin-top: var(--spacing-micro);
 }
 
+
+/* ==========================================================================
+   Portfolio Mobile
+========================================================================== */
+
+@media (max-width: 768px) {
+    .Portfolio {
+        padding: var(--spacing-md);
+    }
+
+    .Portfolio-grid {
+        grid-template-columns: 1fr; 
+        grid-gap: var(--spacing-sm);
+    }
+
+    .Portfolio-card {
+        width: 100%;
+    }
+
+    .Portfolio-name {
+        text-align: start; 
+    }
+}
 
 /* ==========================================================================
    Testimonios Desktop
@@ -184,6 +206,28 @@ body {
 .TestimoniosCard-info {
     display: flex;
     flex-direction: column;
+}
+
+
+/* ==========================================================================
+   Testimonios Mobile
+========================================================================== */
+
+@media (max-width: 768px) {
+    .Testimonios {
+        padding: var(--spacing-md) var(--spacing-md) 0 var(--spacing-md);
+        gap: var(--spacing-sm);
+    }
+
+    .Testimonios-grid {
+        grid-template-columns: 1fr; 
+        gap: var(--spacing-sm);
+    }
+
+    .TestimoniosCard {
+        padding: var(--spacing-sm);
+        gap: var(--spacing-md); 
+    }
 }
 
 /* ==========================================================================
