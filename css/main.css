@@ -68,7 +68,7 @@ body {
 @media (max-width: 768px) {
     .Hero {
         flex-direction: column;
-        padding: var(--spacing-md);
+        padding: var(--spacing-micro);
         text-align: start;
     }
 
