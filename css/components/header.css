@@ -4,14 +4,12 @@
 
 .Header {
     display: flex;
-    width: 100%;
-    position: sticky;
-    top: 0;
     justify-content: space-between;
     align-items: center;
     padding: var(--spacing-xs) var(--spacing-lg);
     background-color: var(--color-bg-secondary);
     backdrop-filter: var(--blur-lg);
+    position: relative;
     z-index: 1;
 }
 
@@ -19,10 +17,22 @@
     height: 48px;
 }
 
-.Header-list {
+/* ==========================================================================
+   Navegación Desktop
+========================================================================== */
+.Header-nav-desktop {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    margin: 0 var(--spacing-lg);
+}
+
+.Header-nav-desktop .Header-list {
     display: flex;
     gap: var(--spacing-md);
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .Header-link {
@@ -35,69 +45,112 @@
     color: var(--color-text-secondary);
 }
 
-.Header-contact {
+.Header-contact-desktop {
     display: block;
+    margin-left: auto;
 }
 
+/* ==========================================================================
+   Menú Hamburguesa
+========================================================================== */
 .Header-toggle {
     display: none;
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
-    z-index: 2;
+    z-index: 1;
 }
 
-.hamburger-icon {
-    display: block;
-    width: 30px;
-    height: 30px;
+.hamburger-icon,
+.close-icon {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s ease;
 }
 
 .close-icon {
     display: none;
-    width: 30px;
-    height: 30px;
-}
-
-.Header-nav.active .hamburger-icon {
-    display: none;
-}
-
-.Header-nav.active .close-icon {
-    display: block;
+    position: absolute;
+    right: var(--spacing-md);
+    top: var(--spacing-sm);
 }
 
 /* ==========================================================================
-   Header Mobile
+   Menú Mobile (Full Screen)
 ========================================================================== */
+.Header-mobileMenu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--color-bg-primary);
+    z-index: 1;
+    transform: translateY(-100%);
+}
 
+.Header-mobileMenu.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Header-nav-mobile {
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xl);
+}
+
+.Header-nav-mobile ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: var(--spacing-xl);
+}
+
+.Header-contact-mobile {
+    display: none;
+}
+
+/* ==========================================================================
+   Responsive (Mobile - max-width: 768px)
+========================================================================== */
 @media (max-width: 768px) {
-    .Header-nav, .Header-contact {
+    .Header-nav-desktop,
+    .Header-contact-desktop {
         display: none;
     }
-    
+
     .Header-toggle {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: block;
+        order: 1;
     }
-    
-    .Header-nav.active {
-        display: flex;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--color-bg-secondary);
-        backdrop-filter: var(--blur-lg);
-        padding: var(--spacing-md) 0;
+
+    .Header-mobileMenu.active {
+        display: block;
     }
-    
-    .Header-list {
-        flex-direction: column;
-        gap: var(--spacing-md);
-        width: 100%;
-        align-items: center;
+
+    .Header-mobileMenu.active .Header-nav-mobile {
+        display: flex;
+    }
+
+    .Header-contact-mobile {
+        display: block;
+    }
+
+    .Header.active .hamburger-icon {
+        display: none;
+    }
+
+    .Header.active .close-icon {
+        display: block;
+    }
+
+    .Header {
+        padding: var(--spacing-xs) var(--spacing-md);
     }
 }

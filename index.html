@@ -20,16 +20,38 @@
         <a href="/index.html" class="Header-logo">
             <img src="/src/images/brand-logo.svg" alt="César Córdova - UX/UI Designer">
         </a>
-        <!-- Lista de navegación -->
-        <nav class="Header-nav">
+
+        <!-- Menú mobile -->
+        <button class="Header-toggle">
+            <img class="hamburger-icon" src="/src/images/icon menu burger.svg" alt="">
+            <img class="close-icon" src="/src/images/icon cross.svg" alt="">
+        </button>
+
+        <!-- Navegación desktop -->
+        <nav class="Header-nav-desktop">
             <ul class="Header-list txt-body-lg">
-                <li> <a href="/index.html" class="Header-link">Inicio</a> </li>
-                <li> <a href="/html/sobre-mi.html" class="Header-link">Sobre mí</a> </li>
-                <li> <a href="/html/portfolio.html" class="Header-link">Portfolio</a> </li>
+                <li><a href="/index.html" class="Header-link">Inicio</a></li>
+                <li><a href="/html/sobre-mi.html" class="Header-link">Sobre mí</a></li>
+                <li><a href="/html/portfolio.html" class="Header-link">Portfolio</a></li>
             </ul>
         </nav>
-        <a href="/html/hablemos.html" class="btnPrimary">¡Hablemos!</a>
+
+        <!-- Contenedor del menú mobile -->
+        <div class="Header-mobileMenu">
+            <nav class="Header-nav-mobile">
+                <ul class="Header-list txt-subtitle">
+                    <li><a href="/index.html" class="Header-link">Inicio</a></li>
+                    <li><a href="/html/sobre-mi.html" class="Header-link">Sobre mí</a></li>
+                    <li><a href="/html/portfolio.html" class="Header-link">Portfolio</a></li>
+                </ul>
+                <a href="/html/hablemos.html" class="btnPrimary Header-contact-mobile">¡Hablemos!</a>
+            </nav>
+        </div>
+
+        <!-- Botón Hablemos - desktop -->
+        <a href="/html/hablemos.html" class="btnPrimary Header-contact-desktop">¡Hablemos!</a>
     </header>
+
 
     <!-- Background -->
     <div class="noise-bg"></div>
@@ -223,15 +245,15 @@
 
         <!-- Hablemos -->
         <article class="Contact">
-                <h2 class="Contact-title txt-display-lg">¡Hablemos!</h2>
-                <a href="mailto:cordovacesaresteban@gmail.com" class="Contact-email">
-                    <h4 class="Contact-emailText txt-subtitle">cordovacesaresteban<span class="txt-subtitle"
-                            id="emailText-span">@gmail.com</span></h4>
-                    <img class="Contact-arrow" src="/src/images/arrow-right.svg" alt="flecha">
-                </a>
+            <h2 class="Contact-title txt-display-lg">¡Hablemos!</h2>
+            <a href="mailto:cordovacesaresteban@gmail.com" class="Contact-email">
+                <h4 class="Contact-emailText txt-subtitle">cordovacesaresteban<span class="txt-subtitle"
+                        id="emailText-span">@gmail.com</span></h4>
+                <img class="Contact-arrow" src="/src/images/arrow-right.svg" alt="flecha">
+            </a>
         </article>
     </main>
-    
+
     <div id="footer__component"></div>
 
     <script>
@@ -252,6 +274,30 @@
             }
         }
         escribir()
+
+        //Header
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleButton = document.querySelector('.Header-toggle');
+            const header = document.querySelector('.Header');
+            const mobileMenu = document.querySelector('.Header-mobileMenu');
+
+            toggleButton.addEventListener('click', function () {
+                header.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+
+                // Bloquear scroll cuando el menú está abierto
+                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
+            });
+
+            // Cerrar menú al hacer click en enlaces
+            document.querySelectorAll('.Header-link, .Header-contact-mobile').forEach(link => {
+                link.addEventListener('click', () => {
+                    header.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                });
+            });
+        });
     </script>
 
 </body>
