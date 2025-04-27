@@ -543,6 +543,7 @@ body {
         display: flex;
         flex-direction: column;
         width: 100%;
+        gap: var(--spacing-sm);
     }
 
     .AboutMe-content {
@@ -551,6 +552,6 @@ body {
     }
 
     .AboutMe-photo {
-        width: 80%; 
+        width: 100%; 
     }
 }
