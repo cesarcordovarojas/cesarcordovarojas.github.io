@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Accordion
+   Accordion Desktop
 ========================================================================== */
 
 .WorkMethod {
@@ -63,4 +63,27 @@
     /* max-height: 1000px; */
     padding-top: 0;
     padding-bottom: var(--spacing-sm);
+}
+
+/* ==========================================================================
+   Accordion Mobile
+========================================================================== */
+
+@media (max-width: 768px) {
+    .WorkMethod {
+        padding: 0 var(--spacing-md);
+        gap: var(--spacing-sm);
+    }
+
+    .Accordion-header {
+        padding: var(--spacing-xs);
+    }
+
+    .Accordion-content {
+        padding: 0 var(--spacing-xs);
+    }
+
+    .Accordion-item {
+        margin-bottom: var(--spacing-xs);
+    }
 }

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Header
+   Header Desktop
 ========================================================================== */
 
 .Header {
@@ -33,4 +33,71 @@
 
 .Header-link:hover {
     color: var(--color-text-secondary);
+}
+
+.Header-contact {
+    display: block;
+}
+
+.Header-toggle {
+    display: none;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.hamburger-icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.close-icon {
+    display: none;
+    width: 30px;
+    height: 30px;
+}
+
+.Header-nav.active .hamburger-icon {
+    display: none;
+}
+
+.Header-nav.active .close-icon {
+    display: block;
+}
+
+/* ==========================================================================
+   Header Mobile
+========================================================================== */
+
+@media (max-width: 768px) {
+    .Header-nav, .Header-contact {
+        display: none;
+    }
+    
+    .Header-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .Header-nav.active {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-bg-secondary);
+        backdrop-filter: var(--blur-lg);
+        padding: var(--spacing-md) 0;
+    }
+    
+    .Header-list {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        width: 100%;
+        align-items: center;
+    }
 }

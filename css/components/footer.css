@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Footer
+   Footer Desktop
 ========================================================================== */
 
 .Footer-social {
@@ -49,4 +49,30 @@
     padding: var(--spacing-micro);
     background-color: var(--color-bg-primary);
     color: var(--color-text-secondary);
+}
+
+
+/* ==========================================================================
+   Footer Mobile
+========================================================================== */
+
+@media (max-width: 768px) {
+    .Footer-social {
+        padding: var(--spacing-md);
+    }
+
+    .Footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-xs);
+    }
+
+    .Footer-link {
+        justify-content: center;
+    }
+
+    .Footer-location {
+        justify-content: center;
+        text-align: center;
+    }
 }

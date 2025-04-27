@@ -291,6 +291,29 @@ body {
 
 
 /* ==========================================================================
+   Hablemos Mobile
+========================================================================== */
+
+@media (max-width: 768px) {
+    .Contact {
+        padding: var(--spacing-md);
+        gap: var(--spacing-md);
+    }
+
+    .Contact-email {
+        width: 100%;
+        max-width: 100%; 
+        gap: var(--spacing-sm);
+        padding: var(--spacing-sm);
+    }
+
+    .Contact-arrow {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* ==========================================================================
    Herramientas Desktop
 ========================================================================== */
 
@@ -329,6 +352,27 @@ body {
 
 
 /* ==========================================================================
+   Herramientas Mobile
+========================================================================== */
+
+@media (max-width: 768px) {
+    .Tools {
+        padding: 0 var(--spacing-md) var(--spacing-md) var(--spacing-md);
+        gap: var(--spacing-sm);
+    }
+
+    .Tools-list {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en mobile */
+        gap: var(--spacing-sm);
+    }
+
+    .Tools-icon {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+/* ==========================================================================
    Sobre mí Desktop
 ========================================================================== */
 
@@ -360,6 +404,27 @@ body {
     height: auto;
     border-radius: var(--radius-md);
     object-fit: cover;
+}
+
+/* ==========================================================================
+   Sobre mí Mobile
+========================================================================== */
+
+@media (max-width: 768px) {
+    .AboutMe {
+        padding: var(--spacing-md);
+        gap: var(--spacing-sm);
+    }
+
+    .AboutMe-container {
+        grid-template-columns: 1fr; /* Cambiamos a una sola columna */
+        gap: var(--spacing-sm);
+    }
+
+    .AboutMe-content {
+        justify-items: center; /* Centramos el contenido */
+        text-align: center; /* Opcional: alinear texto al centro si es necesario */
+    }
 }
 
 /* TABLET

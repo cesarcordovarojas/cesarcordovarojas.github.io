@@ -19,6 +19,16 @@
         <a href="/index.html" class="Header-logo">
             <img src="/src/images/brand-logo.svg" alt="César Córdova - UX/UI Designer">
         </a>
+
+        <!-- Menú mobile -->
+        <button class="Header-toggle">
+            <!-- Icono de menu -->
+            <img class="hamburger-icon" src="/src/images/icon menu burger.svg" alt="">
+
+            <!-- Icono de X -->
+            <img class="close-icon" src="/src/images/icon cross.svg" alt="">
+        </button>
+
         <!-- Lista de navegación -->
         <nav class="Header-nav">
             <ul class="Header-list txt-body-lg">
@@ -27,8 +37,19 @@
                 <li> <a href="/html/portfolio.html" class="Header-link">Portfolio</a> </li>
             </ul>
         </nav>
-        <a href="/html/hablemos.html" class="btnPrimary">¡Hablemos!</a>
+        <a href="/html/hablemos.html" class="btnPrimary Header-contact">¡Hablemos!</a>
     </header>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleButton = document.querySelector('.Header-toggle');
+            const headerNav = document.querySelector('.Header-nav');
+
+            toggleButton.addEventListener('click', function () {
+                headerNav.classList.toggle('active'); 
+            });
+        });
+    </script>
 </body>
+
 </html>
