@@ -40,9 +40,10 @@ body {
 }
 
 .Hero-img {
-    width: 100%;
+    width: 40%;
     max-width: 317px;
     height: auto;
+    object-fit: contain;
     animation: float 3s ease-in-out infinite;
 }
 
@@ -62,6 +63,34 @@ body {
 
 
 /* ==========================================================================
+   Hero Tablet
+========================================================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .Hero {
+        padding: var(--spacing-xl) var(--spacing-lg);
+        gap: var(--spacing-lg);
+
+    }
+
+    .Hero-info {
+        width: 65%;
+        gap: var(--spacing-xs);
+    }
+
+    .Hero-img {
+        width: 35%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .Hero-description {
+        margin-top: var(--spacing-xs);
+    }
+}
+
+
+/* ==========================================================================
    Hero Mobile
 ========================================================================== */
 
@@ -70,7 +99,7 @@ body {
         flex-direction: column;
         padding: var(--spacing-md) var(--spacing-xs) var(--spacing-xl) var(--spacing-xs);
         text-align: start;
-        gap: var(--spacing-md);
+        gap: var(--spacing-lg);
     }
 
     .Hero-info {
@@ -83,6 +112,8 @@ body {
     }
 
     .Hero-img {
+        width: 100%;
+        height: auto;
         max-width: 320px;
         margin-top: var(--spacing-md);
     }
@@ -103,8 +134,8 @@ body {
 
 .Portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(564px, 1fr));
-    grid-gap: var(--spacing-sm);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: var(--spacing-lg) var(--spacing-sm);
     margin-top: var(--spacing-sm);
 }
 
@@ -113,6 +144,7 @@ body {
     overflow: hidden;
     flex-direction: column;
     transition: transform 0.3s ease;
+    text-decoration: none;
 }
 
 .Portfolio-card:hover {
@@ -122,12 +154,24 @@ body {
 .Portfolio-img {
     border-radius: var(--radius-md);
     width: 100%;
-    height: auto;
+    height: 400px;
     object-fit: cover;
 }
 
 .Portfolio-name {
+    color: var(--color-text-primary);
     margin-top: var(--spacing-micro);
+}
+
+
+/* ==========================================================================
+   Portfolio Tablet
+========================================================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .Portfolio {
+        padding: var(--spacing-xl) var(--spacing-lg) 0 var(--spacing-lg);
+    }
 }
 
 
@@ -142,15 +186,11 @@ body {
 
     .Portfolio-grid {
         grid-template-columns: 1fr;
-        grid-gap: var(--spacing-sm);
+        grid-gap: var(--spacing-md);
     }
 
     .Portfolio-card {
         width: 100%;
-    }
-
-    .Portfolio-name {
-        text-align: start;
     }
 }
 
@@ -170,7 +210,7 @@ body {
 
 .Testimonios-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(564px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-sm);
 }
 
@@ -206,6 +246,21 @@ body {
 .TestimoniosCard-info {
     display: flex;
     flex-direction: column;
+}
+
+.TestimoniosCard-rol {
+    color: var(--color-text-secondary);
+}
+
+
+/* ==========================================================================
+   Testimonios Tablet
+========================================================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .Testimonios {
+        padding: var(--spacing-xl) var(--spacing-lg) 0 var(--spacing-lg);
+    }
 }
 
 
@@ -294,6 +349,17 @@ body {
 
 
 /* ==========================================================================
+   Hablemos Tablet
+========================================================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .Contact {
+        padding: var(--spacing-xl) var(--spacing-lg);
+    }
+}
+
+
+/* ==========================================================================
    Hablemos Mobile
 ========================================================================== */
 
@@ -362,7 +428,7 @@ body {
 }
 
 .Tools-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
 }
 
 .Tools-icon {
@@ -372,18 +438,27 @@ body {
 
 
 /* ==========================================================================
+   Herramientas Tablet
+========================================================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .Tools {
+        padding: 0 var(--spacing-lg) var(--spacing-xl) var(--spacing-lg);
+    }
+}
+
+/* ==========================================================================
    Herramientas Mobile
 ========================================================================== */
 
 @media (max-width: 768px) {
     .Tools {
-        padding: 0 var(--spacing-md) var(--spacing-md) var(--spacing-md);
+        padding: 0 var(--spacing-xs) var(--spacing-xl) var(--spacing-xs);
         gap: var(--spacing-sm);
     }
 
     .Tools-list {
         grid-template-columns: repeat(3, 1fr);
-        /* 3 columnas en mobile */
         gap: var(--spacing-sm);
     }
 
@@ -400,31 +475,59 @@ body {
 .AboutMe {
     max-width: 1440px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
     padding: var(--spacing-xl);
     gap: var(--spacing-sm);
     color: var(--color-text-primary);
 }
 
 .AboutMe-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display: flex;
+    flex-direction: row;
     gap: var(--spacing-md);
     align-items: center;
-    padding-top: var(--spacing-sm);
 }
 
 .AboutMe-content {
-    display: grid;
+    display: flex;
     flex-direction: column;
-    justify-items: end;
-    gap: var(--spacing-md);
+    width: 55%;
+    align-items: end;
+    gap: var(--spacing-sm);
 }
 
-.AboutMe-image {
-    width: 100%;
+.AboutMe-photo {
+    width: 45%;
+    max-width: 564px;
     height: auto;
+    object-fit: contain;
     border-radius: var(--radius-md);
-    object-fit: cover;
+}
+
+
+/* ==========================================================================
+   Sobre mí Tablet
+========================================================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .AboutMe {
+        padding: var(--spacing-xl) var(--spacing-lg);
+    }
+
+    .AboutMe-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .AboutMe-content {
+        width: 100%;
+    }
+
+    .AboutMe-photo {
+        width: 50%; 
+    }
 }
 
 /* ==========================================================================
@@ -433,37 +536,21 @@ body {
 
 @media (max-width: 768px) {
     .AboutMe {
-        padding: var(--spacing-md);
-        gap: var(--spacing-sm);
+        padding: var(--spacing-xl) var(--spacing-xs);
     }
 
     .AboutMe-container {
-        grid-template-columns: 1fr;
-        /* Cambiamos a una sola columna */
-        gap: var(--spacing-sm);
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 
     .AboutMe-content {
-        justify-items: center;
-        /* Centramos el contenido */
-        text-align: center;
-        /* Opcional: alinear texto al centro si es necesario */
+        width: 100%;
+        align-items: normal;
+    }
+
+    .AboutMe-photo {
+        width: 80%; 
     }
 }
-
-/* TABLET
-
-@media (min-width: 768px) {
-    .grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-
-DESKTOP 
-
-@media (min-width: 1024px) {
-    .grid {
-        grid-template-columns: repeat(4, 1fr);
-    } 
-} */

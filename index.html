@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
+    <script src="/js/main.js" defer></script>
 </head>
 
 <body>
@@ -51,7 +52,6 @@
         <!-- Botón Hablemos - desktop -->
         <a href="/html/hablemos.html" class="btnPrimary Header-contact-desktop">¡Hablemos!</a>
     </header>
-
 
     <!-- Background -->
     <div class="noise-bg"></div>
@@ -161,22 +161,22 @@
         <article class="Portfolio">
             <h2 class="Portfolio-title txt-display-lg">Portfolio</h2>
             <div class="Portfolio-grid">
-                <article class="Portfolio-card">
+                <a href="https://www.behance.net/gallery/111478017/Lima-Pay" class="Portfolio-card" target="_blank">
+                    <img class="Portfolio-img" src="/src/images/limapay.png" alt="proyecto">
+                    <h3 class="Portfolio-name txt-body-lg">Lima Pay</h3>
+                </a>
+                <a href="" class="Portfolio-card" target="_blank">
                     <img class="Portfolio-img" src="./src/images/card__img.png" alt="proyecto">
                     <h3 class="Portfolio-name txt-body-lg">Name del proyecto</h3>
-                </article>
-                <article class="Portfolio-card">
+                </a>
+                <a href="" class="Portfolio-card" target="_blank">
                     <img class="Portfolio-img" src="./src/images/card__img.png" alt="proyecto">
                     <h3 class="Portfolio-name txt-body-lg">Name del proyecto</h3>
-                </article>
-                <article class="Portfolio-card">
+                </a>
+                <a href="" class="Portfolio-card" target="_blank">
                     <img class="Portfolio-img" src="./src/images/card__img.png" alt="proyecto">
                     <h3 class="Portfolio-name txt-body-lg">Name del proyecto</h3>
-                </article>
-                <article class="Portfolio-card">
-                    <img class="Portfolio-img" src="./src/images/card__img.png" alt="proyecto">
-                    <h3 class="Portfolio-name txt-body-lg">Name del proyecto</h3>
-                </article>
+                </a>
             </div>
         </article>
 
@@ -254,52 +254,6 @@
         </article>
     </main>
 
-    <div id="footer__component"></div>
-
-    <script>
-        // Footer
-        fetch('html/components/footer.html')
-            .then(response => response.text())
-            .then(footer => {
-                document.getElementById("footer__component").innerHTML = footer;
-            });
-
-        // Efecto txt
-        let heroEffect = "¡Hola! Soy César Córdova"
-        let i = 0;
-        function escribir() {
-            if (i < heroEffect.length) {
-                document.getElementById("heroEffect").textContent += heroEffect[i++]
-                setTimeout(escribir, 100)
-            }
-        }
-        escribir()
-
-        //Header
-        document.addEventListener('DOMContentLoaded', function () {
-            const toggleButton = document.querySelector('.Header-toggle');
-            const header = document.querySelector('.Header');
-            const mobileMenu = document.querySelector('.Header-mobileMenu');
-
-            toggleButton.addEventListener('click', function () {
-                header.classList.toggle('active');
-                mobileMenu.classList.toggle('active');
-
-                // Bloquear scroll cuando el menú está abierto
-                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
-            });
-
-            // Cerrar menú al hacer click en enlaces
-            document.querySelectorAll('.Header-link, .Header-contact-mobile').forEach(link => {
-                link.addEventListener('click', () => {
-                    header.classList.remove('active');
-                    mobileMenu.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                });
-            });
-        });
-    </script>
-
+    <footer id="footer__component"></footer>
 </body>
-
 </html>

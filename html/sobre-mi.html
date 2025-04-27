@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
+    <script src="/js/main.js" defer></script>
 </head>
 
 <body>
@@ -20,15 +21,36 @@
         <a href="/index.html" class="Header-logo">
             <img src="/src/images/brand-logo.svg" alt="César Córdova - UX/UI Designer">
         </a>
-        <!-- Lista de navegación -->
-        <nav class="Header-nav">
+
+        <!-- Menú mobile -->
+        <button class="Header-toggle">
+            <img class="hamburger-icon" src="/src/images/icon menu burger.svg" alt="">
+            <img class="close-icon" src="/src/images/icon cross.svg" alt="">
+        </button>
+
+        <!-- Navegación desktop -->
+        <nav class="Header-nav-desktop">
             <ul class="Header-list txt-body-lg">
-                <li> <a href="/index.html" class="Header-link">Inicio</a> </li>
-                <li> <a href="/html/sobre-mi.html" class="Header-link">Sobre mí</a> </li>
-                <li> <a href="/html/portfolio.html" class="Header-link">Portfolio</a> </li>
+                <li><a href="/index.html" class="Header-link">Inicio</a></li>
+                <li><a href="/html/sobre-mi.html" class="Header-link">Sobre mí</a></li>
+                <li><a href="/html/portfolio.html" class="Header-link">Portfolio</a></li>
             </ul>
         </nav>
-        <a href="/html/hablemos.html" class="btnPrimary">¡Hablemos!</a>
+
+        <!-- Contenedor del menú mobile -->
+        <div class="Header-mobileMenu">
+            <nav class="Header-nav-mobile">
+                <ul class="Header-list txt-subtitle">
+                    <li><a href="/index.html" class="Header-link">Inicio</a></li>
+                    <li><a href="/html/sobre-mi.html" class="Header-link">Sobre mí</a></li>
+                    <li><a href="/html/portfolio.html" class="Header-link">Portfolio</a></li>
+                </ul>
+                <a href="/html/hablemos.html" class="btnPrimary Header-contact-mobile">¡Hablemos!</a>
+            </nav>
+        </div>
+
+        <!-- Botón Hablemos - desktop -->
+        <a href="/html/hablemos.html" class="btnPrimary Header-contact-desktop">¡Hablemos!</a>
     </header>
 
     <!-- Background -->
@@ -38,15 +60,10 @@
     <section class="AboutMe">
         <h2 class="AboutMe-title txt-display-lg">Sobre mí</h2>
         <div class="AboutMe-container">
-            <img class="AboutMe-photo" src="/src/images/image 3.png" alt="Retrato de Cesar Cordova - UX/UI Designer">
+            <img class="AboutMe-photo" src="/src/images/photo cesar cordova.png" alt="Retrato de Cesar Cordova - UX/UI Designer">
             <div class="AboutMe-content">
-                <p class="AboutMe-txt txt-body-lg ">Hola, soy Cesar. Soy UX/UI Designer con más de 4 años de experiencia
-                    creando soluciones digitales centradas en el usuario. Comencé mi carrera en Perú, donde trabajé con
-                    empresas de diversos sectores, y ahora estoy en España, listo para aportar mi experiencia y
-                    creatividad a nuevos proyectos. Me apasiona entender las necesidades de los usuarios y traducirlas
-                    en diseños intuitivos y atractivos. Creo que el buen diseño no solo debe verse bien, sino también
-                    resolver problemas reales. Mis habilidades incluyen investigación de usuarios, diseño de interfaces,
-                    prototipado interactivo y colaboración estrecha con equipos de desarrollo."</p>
+                <p class="AboutMe-txt txt-body-lg ">Diseñador UX/UI con más de 5 años de experiencia transformando ideas en productos digitales de alto impacto. Actualmente resido en Valencia, España. Especializado en el proceso completo de diseño, desde la investigación hasta la implementación.</p>
+                <p class="AboutMe-txt txt-body-lg ">Además, optimizo la colaboración con equipos de desarrollo gracias a mi experiencia en front-end. Estoy preparado para asumir nuevos desafíos y aportar mi pasión y conocimientos para llevar tus proyectos al siguiente nivel.</p>
                 <a href="/src/documents/cv.pdf" target="_blank" class="btnSecondary">Descargar CV</a>
             </div>
         </div>
@@ -257,18 +274,12 @@
         </a>
     </article>
 
-    <div id="footer__component"></div>
+    <footer id="footer__component"></footer>
 
     <script>
-
-        // Footer
-        fetch('components/footer.html')
-            .then(response => response.text())
-            .then(footer => {
-                document.getElementById("footer__component").innerHTML = footer;
-            });
-
-        //Acordeon
+        /* ==========================================================================
+           Accordion
+        ========================================================================== */
         document.querySelectorAll('.Accordion-item').forEach(item => {
             const header = item.querySelector('.Accordion-header');
             const content = item.querySelector('.Accordion-content');
@@ -284,8 +295,16 @@
             });
         });
 
-    </script>
+        /* ==========================================================================
+           Footer
+        ========================================================================== */
+        fetch('/html/components/footer.html')
+            .then(response => response.text())
+            .then(footer => {
+                document.getElementById("footer__component").innerHTML = footer;
+            });
 
+    </script>
 </body>
 
 </html>
