@@ -234,7 +234,11 @@ body {
     display: flex;
     gap: var(--spacing-micro);
     align-items: center;
+}
 
+.TestimoniosCard-avatar {
+    width: 64px;
+    height: 64px;
 }
 
 .TestimoniosCard-autor {

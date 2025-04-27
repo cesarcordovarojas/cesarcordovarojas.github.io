@@ -51,7 +51,6 @@
     color: var(--color-text-secondary);
 }
 
-/* Estados activos */
 .Accordion-item.is-active {
     border-color: var(--color-border-hover);
 }
@@ -61,7 +60,6 @@
 }
 
 .Accordion-item.is-active .Accordion-content {
-    /* max-height: 1000px; */
     padding-top: 0;
     padding-bottom: var(--spacing-sm);
 }
