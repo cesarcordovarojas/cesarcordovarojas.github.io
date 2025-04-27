@@ -76,8 +76,8 @@
 .close-icon {
     display: none;
     position: absolute;
-    right: var(--spacing-md);
-    top: var(--spacing-sm);
+    right: var(--spacing-lg);
+    top: var(--spacing-lg);
 }
 
 
