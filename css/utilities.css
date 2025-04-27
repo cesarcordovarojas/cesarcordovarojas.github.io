@@ -62,12 +62,20 @@
     color: var(--color-bg-secondary);
 }
 
+.color-bg-tertiary {
+    color: var(--color-bg-tertiary);
+}
+
 .color-txt-primary {
     color: var(--color-text-primary);
 }
 
 .color-txt-secondary {
     color: var(--color-text-secondary);
+}
+
+.color-txt-tertiary {
+    color: var(--color-text-tertiary);
 }
 
 .color-txt-positive {

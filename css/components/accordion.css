@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Accordion
+========================================================================== */
+
+.WorkMethod {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--spacing-xl) 0 var(--spacing-xl);
+    gap: var(--spacing-sm);
+    color: var(--color-text-primary);
+}
+
+.Accordion-item {
+    background-color: var(--color-bg-primary);
+    border: 1px solid var(--color-border-primary);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-sm);
+    transition: border-color 0.3s ease;
+}
+
+.Accordion-item:hover {
+    border-color: var(--color-border-hover);
+}
+
+.Accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm);
+    cursor: pointer;
+}
+
+.Accordion-icon {
+    transition: transform 0.3s ease-in-out;
+}
+
+.Accordion-content {
+    box-sizing: content-box;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 var(--spacing-sm);
+    transition: 
+        max-height 0.3s ease-in-out,
+        padding 0.3s ease-in-out;
+}
+
+.Accordion-text {
+    color: var(--color-text-secondary);
+}
+
+/* Estados activos */
+.Accordion-item.is-active {
+    border-color: var(--color-border-hover);
+}
+
+.Accordion-item.is-active .Accordion-icon {
+    transform: rotate(180deg);
+}
+
+.Accordion-item.is-active .Accordion-content {
+    /* max-height: 1000px; */
+    padding-top: 0;
+    padding-bottom: var(--spacing-sm);
+}

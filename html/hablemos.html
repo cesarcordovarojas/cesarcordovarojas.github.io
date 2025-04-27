@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,21 +12,40 @@
         rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
 </head>
+
 <body>
-    <div id="header__component"></div>
+    <!-- Header -->
+    <header class="Header">
+        <!-- Logo -->
+        <a href="/index.html" class="Header-logo">
+            <img src="/src/images/brand-logo.svg" alt="César Córdova - UX/UI Designer">
+        </a>
+        <!-- Lista de navegación -->
+        <nav class="Header-nav">
+            <ul class="Header-list txt-body-lg">
+                <li> <a href="/index.html" class="Header-link">Inicio</a> </li>
+                <li> <a href="/html/sobre-mi.html" class="Header-link">Sobre mí</a> </li>
+                <li> <a href="/html/portfolio.html" class="Header-link">Portfolio</a> </li>
+            </ul>
+        </nav>
+        <a href="/html/hablemos.html" class="btnPrimary">¡Hablemos!</a>
+    </header>
 
     <div class="noise-bg"></div>
+
+    <!-- Hablemos -->
+    <article class="Contact">
+        <h2 class="Contact-title txt-display-lg">¡Hablemos!</h2>
+        <a href="mailto:cordovacesaresteban@gmail.com" class="Contact-email">
+            <h4 class="Contact-emailText txt-subtitle">cordovacesaresteban<span class="txt-subtitle"
+                    id="emailText-span">@gmail.com</span></h4>
+            <img class="Contact-arrow" src="/src/images/arrow-right.svg" alt="flecha">
+        </a>
+    </article>
 
     <div id="footer__component"></div>
 
     <script>
-
-        // Header
-        fetch('components/header.html')
-            .then(response => response.text())
-            .then(header => {
-                document.getElementById("header__component").innerHTML = header;
-            });
 
         // Footer
         fetch('components/footer.html')
@@ -36,4 +56,5 @@
 
     </script>
 </body>
+
 </html>
