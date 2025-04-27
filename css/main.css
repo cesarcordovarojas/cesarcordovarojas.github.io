@@ -67,14 +67,25 @@ body {
 
 @media (max-width: 768px) {
     .Hero {
-        min-width: 320px;
-        margin: 0;
         flex-direction: column;
-        justify-content: space-between;
-        padding: var(--spacing-xs);
-        
+        padding: var(--spacing-md);
+        text-align: start;
     }
-  }
+
+    .Hero-info {
+        width: 100%;
+        align-items: start;
+    }
+
+    .Hero-description {
+        margin-top: var(--spacing-xs);
+    }
+
+    .Hero-img {
+        max-width: 240px; 
+        margin-top: var(--spacing-md);
+    }
+}
 
 /* ==========================================================================
    Portfolio Desktop
