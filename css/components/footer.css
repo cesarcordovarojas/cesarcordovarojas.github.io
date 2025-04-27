@@ -58,21 +58,11 @@
 
 @media (max-width: 768px) {
     .Footer-social {
-        padding: var(--spacing-md);
+        padding: var(--spacing-xs);
     }
 
     .Footer-links {
         flex-direction: column;
-        align-items: center;
-        gap: var(--spacing-xs);
-    }
-
-    .Footer-link {
-        justify-content: center;
-    }
-
-    .Footer-location {
-        justify-content: center;
-        text-align: center;
+        gap: var(--spacing-md);
     }
 }

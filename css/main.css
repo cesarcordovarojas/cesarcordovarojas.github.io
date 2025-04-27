@@ -68,8 +68,9 @@ body {
 @media (max-width: 768px) {
     .Hero {
         flex-direction: column;
-        padding: var(--spacing-micro);
+        padding: var(--spacing-xl) var(--spacing-xs);
         text-align: start;
+        gap: var(--spacing-md);
     }
 
     .Hero-info {
@@ -82,7 +83,7 @@ body {
     }
 
     .Hero-img {
-        max-width: 240px; 
+        max-width: 320px; 
         margin-top: var(--spacing-md);
     }
 }
@@ -96,8 +97,7 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    padding: var(--spacing-xl);
-    padding-bottom: 0;
+    padding: var(--spacing-xl) var(--spacing-xl) 0 var(--spacing-xl);
     color: var(--color-text-primary);
 }
 
@@ -137,7 +137,7 @@ body {
 
 @media (max-width: 768px) {
     .Portfolio {
-        padding: var(--spacing-md);
+        padding: var(--spacing-xl) var(--spacing-xs) 0 var(--spacing-xs);
     }
 
     .Portfolio-grid {
@@ -215,7 +215,7 @@ body {
 
 @media (max-width: 768px) {
     .Testimonios {
-        padding: var(--spacing-md) var(--spacing-md) 0 var(--spacing-md);
+        padding: var(--spacing-xl) var(--spacing-xs) 0 var(--spacing-xs);
         gap: var(--spacing-sm);
     }
 
@@ -296,13 +296,14 @@ body {
 
 @media (max-width: 768px) {
     .Contact {
-        padding: var(--spacing-md);
-        gap: var(--spacing-md);
+        padding: var(--spacing-xl) var(--spacing-xs);
+        gap: var(--spacing-sm);
     }
 
     .Contact-email {
         width: 100%;
-        max-width: 100%; 
+        max-width: 100%;
+        justify-content: space-between;
         gap: var(--spacing-sm);
         padding: var(--spacing-sm);
     }

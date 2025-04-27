@@ -160,6 +160,10 @@
     }
 
     .Header {
-        padding: var(--spacing-xs) var(--spacing-md);
+        padding: var(--spacing-xs);
+    }
+
+    .Header-logo img {
+        height: 32px;
     }
 }
