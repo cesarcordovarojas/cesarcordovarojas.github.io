@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hablemos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="/js/main.js" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="Header">
+        <!-- Logo -->
+        <a href="./index.html" class="Header-logo">
+            <img src="/src/images/brand-logo.svg" alt="César Córdova - UX/UI Designer">
+        </a>
+
+        <!-- Menú mobile -->
+        <button class="Header-toggle">
+            <img class="hamburger-icon" src="./src/images/icon-menu.svg" alt="">
+            <img class="close-icon" src="./src/images/icon-cross.svg" alt="">
+        </button>
+
+        <!-- Navegación desktop -->
+        <nav class="Header-nav-desktop">
+            <ul class="Header-list txt-body-lg">
+                <li><a href="./index.html" class="Header-link">Inicio</a></li>
+                <li><a href="./about.html" class="Header-link">Sobre mí</a></li>
+                <li><a href="./portfolio.html" class="Header-link">Portfolio</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenedor del menú mobile -->
+        <div class="Header-mobileMenu">
+            <nav class="Header-nav-mobile">
+                <ul class="Header-list txt-subtitle">
+                    <li><a href="./index.html" class="Header-link">Inicio</a></li>
+                    <li><a href="./about.html" class="Header-link">Sobre mí</a></li>
+                    <li><a href="./portfolio.html" class="Header-link">Portfolio</a></li>
+                </ul>
+                <a href="./contact.html" class="btnPrimary Header-contact-mobile">¡Hablemos!</a>
+            </nav>
+        </div>
+
+        <!-- Botón Hablemos - desktop -->
+        <a href="./contact.html" class="btnPrimary Header-contact-desktop">¡Hablemos!</a>
+    </header>
+
+    <div class="noise-bg"></div>
+
+    <!-- Hablemos -->
+    <article class="Contact">
+        <h2 class="Contact-title txt-display-lg">¡Hablemos!</h2>
+        <a href="mailto:cordovacesaresteban@gmail.com" class="Contact-email">
+            <h4 class="Contact-emailText txt-subtitle">cordovacesaresteban<span class="txt-subtitle"
+                    id="emailText-span">@gmail.com</span></h4>
+            <img class="Contact-arrow" src="/src/images/arrow-right.svg" alt="flecha">
+        </a>
+    </article>
+
+    <!-- Footer -->
+    <footer class="Footer">
+        <div class="Footer-social">
+            <ul class="Footer-links">
+                <li class="Footer-linkItem">
+                    <a href="https://www.linkedin.com/in/cesarcordovar/" class="Footer-link">
+                        <img src="/src/images/linkedin.svg" alt="Perfil de linkedin">
+                        <span class="Footer-linkText txt-body-lg">LinkedIn</span>
+                    </a>
+                </li>
+                <li class="Footer-linkItem">
+                    <a href="https://www.behance.net/cesarcordova" class="Footer-link">
+                        <img src="/src/images/behance.svg" alt="Portfolio en behance">
+                        <span class="Footer-linkText txt-body-lg">Behance</span>
+                    </a>
+                </li>
+                <li class="Footer-linkItem">
+                    <a href="https://api.whatsapp.com/send/?phone=34687132721" class="Footer-link">
+                        <img src="/src/images/phone-call.svg" alt="Contacto por whatsapp">
+                        <span class="Footer-linkText txt-body-lg">+34 687 13 27 21</span>
+                    </a>
+                </li>
+                <li class="Footer-linkItem">
+                    <div class="Footer-location">
+                        <img src="/src/images/marker.svg" alt="Ubicación">
+                        <span class="Footer-locationText txt-body-lg">Valencia, España</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="Footer-legal">
+            <p class="Footer-copyright txt-body-sm">© 2025 - Cesar Cordova</p>
+        </div>
+    </footer>
+    
+</body>
+
+</html>

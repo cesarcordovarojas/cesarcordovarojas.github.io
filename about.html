@@ -18,22 +18,22 @@
     <!-- Header -->
     <header class="Header">
         <!-- Logo -->
-        <a href="/index.html" class="Header-logo">
+        <a href="./index.html" class="Header-logo">
             <img src="/src/images/brand-logo.svg" alt="César Córdova - UX/UI Designer">
         </a>
 
         <!-- Menú mobile -->
         <button class="Header-toggle">
-            <img class="hamburger-icon" src="/src/images/icon menu burger.svg" alt="">
-            <img class="close-icon" src="/src/images/icon cross.svg" alt="">
+            <img class="hamburger-icon" src="./src/images/icon-menu.svg" alt="">
+            <img class="close-icon" src="./src/images/icon-cross.svg" alt="">
         </button>
 
         <!-- Navegación desktop -->
         <nav class="Header-nav-desktop">
             <ul class="Header-list txt-body-lg">
-                <li><a href="/index.html" class="Header-link">Inicio</a></li>
-                <li><a href="/html/sobre-mi.html" class="Header-link">Sobre mí</a></li>
-                <li><a href="/html/portfolio.html" class="Header-link">Portfolio</a></li>
+                <li><a href="./index.html" class="Header-link">Inicio</a></li>
+                <li><a href="./about.html" class="Header-link">Sobre mí</a></li>
+                <li><a href="./portfolio.html" class="Header-link">Portfolio</a></li>
             </ul>
         </nav>
 
@@ -41,16 +41,16 @@
         <div class="Header-mobileMenu">
             <nav class="Header-nav-mobile">
                 <ul class="Header-list txt-subtitle">
-                    <li><a href="/index.html" class="Header-link">Inicio</a></li>
-                    <li><a href="/html/sobre-mi.html" class="Header-link">Sobre mí</a></li>
-                    <li><a href="/html/portfolio.html" class="Header-link">Portfolio</a></li>
+                    <li><a href="./index.html" class="Header-link">Inicio</a></li>
+                    <li><a href="./about.html" class="Header-link">Sobre mí</a></li>
+                    <li><a href="./portfolio.html" class="Header-link">Portfolio</a></li>
                 </ul>
-                <a href="/html/hablemos.html" class="btnPrimary Header-contact-mobile">¡Hablemos!</a>
+                <a href="./contact.html" class="btnPrimary Header-contact-mobile">¡Hablemos!</a>
             </nav>
         </div>
 
         <!-- Botón Hablemos - desktop -->
-        <a href="/html/hablemos.html" class="btnPrimary Header-contact-desktop">¡Hablemos!</a>
+        <a href="./contact.html" class="btnPrimary Header-contact-desktop">¡Hablemos!</a>
     </header>
 
     <!-- Background -->
@@ -60,7 +60,7 @@
     <section class="AboutMe">
         <h2 class="AboutMe-title txt-display-lg">Sobre mí</h2>
         <div class="AboutMe-container">
-            <img class="AboutMe-photo" src="/src/images/photo cesar cordova.png" alt="Retrato de Cesar Cordova - UX/UI Designer">
+            <img class="AboutMe-photo" src="./src/images/cesar-cordova.png" alt="Retrato de Cesar Cordova - UX/UI Designer">
             <div class="AboutMe-content">
                 <p class="AboutMe-txt txt-body-lg ">Diseñador UX/UI con más de 5 años de experiencia transformando ideas en productos digitales de alto impacto. Actualmente resido en Valencia, España. Especializado en el proceso completo de diseño, desde la investigación hasta la implementación.</p>
                 <p class="AboutMe-txt txt-body-lg ">Además, optimizo la colaboración con equipos de desarrollo gracias a mi experiencia en front-end. Estoy preparado para asumir nuevos desafíos y aportar mi pasión y conocimientos para llevar tus proyectos al siguiente nivel.</p>
@@ -274,7 +274,40 @@
         </a>
     </article>
 
-    <footer id="footer__component"></footer>
+    <!-- Footer -->
+    <footer class="Footer">
+        <div class="Footer-social">
+            <ul class="Footer-links">
+                <li class="Footer-linkItem">
+                    <a href="https://www.linkedin.com/in/cesarcordovar/" class="Footer-link">
+                        <img src="/src/images/linkedin.svg" alt="Perfil de linkedin">
+                        <span class="Footer-linkText txt-body-lg">LinkedIn</span>
+                    </a>
+                </li>
+                <li class="Footer-linkItem">
+                    <a href="https://www.behance.net/cesarcordova" class="Footer-link">
+                        <img src="/src/images/behance.svg" alt="Portfolio en behance">
+                        <span class="Footer-linkText txt-body-lg">Behance</span>
+                    </a>
+                </li>
+                <li class="Footer-linkItem">
+                    <a href="https://api.whatsapp.com/send/?phone=34687132721" class="Footer-link">
+                        <img src="/src/images/phone-call.svg" alt="Contacto por whatsapp">
+                        <span class="Footer-linkText txt-body-lg">+34 687 13 27 21</span>
+                    </a>
+                </li>
+                <li class="Footer-linkItem">
+                    <div class="Footer-location">
+                        <img src="/src/images/marker.svg" alt="Ubicación">
+                        <span class="Footer-locationText txt-body-lg">Valencia, España</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="Footer-legal">
+            <p class="Footer-copyright txt-body-sm">© 2025 - Cesar Cordova</p>
+        </div>
+    </footer>
 
     <script>
         /* ==========================================================================
@@ -294,15 +327,6 @@
                 }
             });
         });
-
-        /* ==========================================================================
-           Footer
-        ========================================================================== */
-        fetch('/html/components/footer.html')
-            .then(response => response.text())
-            .then(footer => {
-                document.getElementById("footer__component").innerHTML = footer;
-            });
 
     </script>
 </body>

@@ -26,23 +26,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 /* ==========================================================================
-   Efecto txt hero
-========================================================================== */
-let heroEffect = "¡Hola! Soy César Córdova"
-let i = 0;
-function escribir() {
-    if (i < heroEffect.length) {
-        document.getElementById("heroEffect").textContent += heroEffect[i++]
-        setTimeout(escribir, 100)
-    }
-}
-escribir()
-
-
-/* ==========================================================================
    Footer
 ========================================================================== */
-fetch('/html/components/footer.html')
+fetch('./components/footer.html')
 .then(response => response.text())
 .then(footer => {
     document.getElementById("footer__component").innerHTML = footer;
