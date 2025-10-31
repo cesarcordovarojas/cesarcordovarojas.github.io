@@ -37,6 +37,7 @@ body {
 
 .Hero-description {
     margin-top: var(--spacing-sm);
+    color: var(--color-text-secondary);
 }
 
 .Hero-img {
